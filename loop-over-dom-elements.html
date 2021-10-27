@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const fakeImages = document.querySelectorAll(".fake-image");
+        // 1. classic way
+        for (var i = 0; i < fakeImages.length; i++)
+            console.log('1. fakeImage: ', fakeImages[i], ' type = ', typeof(fakeImages[i]));
+
+        // 2. can loop over iterable objects:
+        for (const fakeImage of fakeImages)
+            console.log( '2. fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
+
+        //  3.Each item in this loop is an Array with first the key and then the element.
+        for (const fakeImage of fakeImages.entries())
+            console.log('3. fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
+
+        // 4. for each for nodes
+        fakeImages.forEach(fakeImage => {
+            console.log('4. fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
+        });
+
+        // 5. spread syntax
+        // console.dir displays an interactive list of the properties
+        console.log('5.');
+        [...fakeImages].forEach(fakeImage => {
+            console.dir(fakeImage);
+        });
+    });
+
+
+</script>
+
+<div class="container" id="myContainer">
+    <div class="fake-image">
+        <h2>Fake image 1</h2>
+    </div>
+    <div class="fake-image">
+        <h2>Fake image 2</h2>
+    </div>
+    <div class="fake-image">
+        <h2>Fake image 3</h2>
+    </div>
+    <div class="fake-image">
+        <h2>Fake image 4</h2>
+    </div>
+</div>
+
+</body>
+</html>
