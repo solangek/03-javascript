@@ -5,21 +5,21 @@ we want to expose by putting them in the return statement (e.g. average & failin
  */
 const myGradesCalculate = (function () {
     // Keep this variable private inside this closure scope
-    var myGrades = [93, 95, 88, 0, 55, 91];
-    var average = function() {
+    let myGrades = [93, 95, 88, 0, 55, 91];
+    const average = function() {
         var total = myGrades.reduce(function(accumulator, item) {
             return accumulator + item;
         }, 0);
 
         return'Your average grade is ' + total / myGrades.length + '.';
     };
-    var failing = function() {
+    const failing = function() {
         var failingGrades = myGrades.filter(function(item) {
             return item < 70;
         });
         return 'You failed ' + failingGrades.length + ' times.';
     };
-    var privateFunction = function() {
+    let privateFunction = function() {
         console.log('Shhhh, this is private!');
     }
     // Explicitly reveal public pointers to the private functions

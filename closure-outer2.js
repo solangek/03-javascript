@@ -8,7 +8,7 @@
 
 
 function celebrityID () {
-    var celebrityID = 999;
+    let celebrityID = 999;
 
     // We are returning an object with some inner functions
     // All the inner functions have access to the outer function's variables

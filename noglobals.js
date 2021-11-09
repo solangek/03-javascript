@@ -14,16 +14,16 @@
 (function () {
     // We keep these variables private inside this closure scope
 
-    var myGrades = [93, 95, 45, 0, 70, 91];
+    let myGrades = [93, 95, 45, 0, 70, 91];
 
-    var average = function() {
+    const average = function() {
         var total = myGrades.reduce(function(accumulator, item) {
             return accumulator + item}, 0);
 
         return 'Your average grade is ' + total / myGrades.length + '.';
     }
 
-    var failing = function(){
+    const failing = function(){
         var failingGrades = myGrades.filter(function(item) {
             return item < 55;});
 

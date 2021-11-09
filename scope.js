@@ -1,4 +1,4 @@
-// function scope
+// function scope TESTS
 //
 function something() {
     y = 1; // Throws a ReferenceError in strict mode.

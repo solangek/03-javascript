@@ -2,7 +2,7 @@ const name = 'Max';
 let price = 29;
 const onSale = true;
 
-age = 30;
+let age = 30;
 
 const summarizeUser = (userName, price, onsale) => {
     return (
