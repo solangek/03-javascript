@@ -12,12 +12,15 @@ const printName = ({ name }) => {
 
 printName(person);
 
+console.log ("----1----")
 const { name, age } = person;
 console.log(name, age);
 
-// const copiedPerson = { ...person };
-// console.log(copiedPerson);
+console.log ("----2----")
+const copiedPerson = { ...person };
+console.log(copiedPerson);
 
+console.log ("----3----")
 const hobbies = ['Sports', 'Cooking'];
 const [hobby1, hobby2] = hobbies;
 console.log(hobby1, hobby2);
