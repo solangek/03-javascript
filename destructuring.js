@@ -17,6 +17,7 @@ const { name, age } = person;
 console.log(name, age);
 
 console.log ("----2----")
+// becareful this is not deep copy - for deep copy use JSON.parse(JSON.stringify(person))
 const copiedPerson = { ...person };
 console.log(copiedPerson);
 
