@@ -1,17 +1,17 @@
 // function scope TESTS
 //
 function something() {
-    y = 1; // Throws a ReferenceError in strict mode.
-    var z = 2;
+    y = 1; // not recommended! Throws a ReferenceError in strict mode.
+    var z = 2; // not recommended, use let instead
 }
 something();
-console.log(y); // 1 
+console.log(y); // 1  - is a global variable!
 console.log(z); // Throws a ReferenceError: z is not defined outside x.
 
 
-var x6 = 1
+var x = 1
 function myFunction() {
-    var x6 = 2;
+    let x = 2;
     console.log(x6) // 2
 }
 myFunction()

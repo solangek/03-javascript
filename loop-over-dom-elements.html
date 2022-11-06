@@ -11,24 +11,28 @@
         const fakeImages = document.querySelectorAll(".fake-image");
         // 1. classic way
         for (var i = 0; i < fakeImages.length; i++)
-            console.log('1. fakeImage: ', fakeImages[i], ' type = ', typeof(fakeImages[i]));
+            console.log('case 1: fakeImage: ', fakeImages[i], ' type = ', typeof(fakeImages[i]));
 
         // 2. can loop over iterable objects:
         for (const fakeImage of fakeImages)
-            console.log( '2. fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
+            console.log( 'case 2: fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
 
         //  3.Each item in this loop is an Array with first the key and then the element.
         for (const fakeImage of fakeImages.entries())
-            console.log('3. fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
+            console.log('case 3: fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
+
+        for (const [key,value] of fakeImages.entries())
+            console.log('case 3b:',  key)
+
 
         // 4. for each for nodes
         fakeImages.forEach(fakeImage => {
-            console.log('4. fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
+            console.log('case 4: fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
         });
 
         // 5. spread syntax
         // console.dir displays an interactive list of the properties
-        console.log('5.');
+        console.log('case 5:');
         [...fakeImages].forEach(fakeImage => {
             console.dir(fakeImage);
         });
