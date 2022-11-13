@@ -17,6 +17,10 @@
         for (const fakeImage of fakeImages)
             console.log( 'case 2: fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
 
+        // 2b. loop over index of iterable objects:
+        for (const i in fakeImages)
+            console.log( 'case 2b: i: ', i, ' type = ', typeof(i));
+
         //  3.Each item in this loop is an Array with first the key and then the element.
         for (const fakeImage of fakeImages.entries())
             console.log('case 3: fakeImage: ', fakeImage, ' type = ', typeof(fakeImage));
@@ -36,6 +40,9 @@
         [...fakeImages].forEach(fakeImage => {
             console.dir(fakeImage);
         });
+
+        // duplicate the array
+        const fakeImages2 = Array.copy(fakeImages);
     });
 
 

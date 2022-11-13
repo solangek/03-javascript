@@ -10,6 +10,8 @@ const copiedPerson = { ...person };
 console.log("-1-");
 console.log(copiedPerson);
 console.log(copiedPerson['name']);
+console.log(copiedPerson.name);
+copiedPerson.greet()
 
 console.log("-2-");
 const hobbies = ['Sports', 'Cooking'];

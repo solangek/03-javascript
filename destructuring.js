@@ -1,10 +1,13 @@
+
 const person = {
     name: 'Max',
     age: 29,
-    greet() {
+    greet() { // here no need to write greet : function() { ... }  since JS is smart enough to understand that this is a function
         console.log('Hi, I am ' + this.name);
     }
 };
+
+person.greet()
 
 const printName = ({ name }) => {
     console.log(name);
@@ -13,7 +16,7 @@ const printName = ({ name }) => {
 printName(person);
 
 console.log ("----1----")
-const { name, age } = person;
+const { name, age } = person; // we deconstruct the object person with {}
 console.log(name, age);
 
 console.log ("----2----")
@@ -23,7 +26,7 @@ console.log(copiedPerson);
 
 console.log ("----3----")
 const hobbies = ['Sports', 'Cooking'];
-const [hobby1, hobby2] = hobbies;
+const [hobby1, hobby2] = hobbies; // we deconstruct the array hobbies with []
 console.log(hobby1, hobby2);
 
 // // for (let hobby of hobbies) {

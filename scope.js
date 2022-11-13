@@ -3,32 +3,32 @@
 function something() {
     y = 1; // not recommended! Throws a ReferenceError in strict mode.
     var z = 2; // not recommended, use let instead
+
+    function inner() {
+        console.log("0:" + z); // 1  since z is in the scope of the function inner
+    }
 }
 something();
-console.log(y); // 1  - is a global variable!
-console.log(z); // Throws a ReferenceError: z is not defined outside x.
+console.log("1:" + y); // 1  - is a global variable!
+//console.log(z); // Throws a ReferenceError: z is not defined outside x.
 
 
 var x = 1
 function myFunction() {
     let x = 2;
-    console.log(x6) // 2
+    console.log("2:" + x) // 2
 }
 myFunction()
-console.log(x6) // 1
+console.log("3:" + x) // 1
 
 
 // BLOCK SCOPE
 const x1 = 1
 {
     const x1 = 2
-    console.log(x1) // 2
+    console.log("4:" + x1) // 2
 }
-console.log(x1) // 1
-
-// global variables
-window.x8 = 38;
-let x9 = 11;
+console.log("5:" + x1) // 1
 
 // NESTED SCOPE
 
@@ -37,8 +37,8 @@ function nestedScopes() {
 
     if (true) {
         const fromIf = 'Hello If Block!'
-        console.log(message) // Hello World!
+        console.log("6:" + message) // Hello World!
     }
-    console.log(fromIf) // ReferenceError: fromIf is not defined
+    //console.log("7:" + fromIf) // ReferenceError: fromIf is not defined
 }
 nestedScopes();

@@ -4,6 +4,7 @@ const onSale = true;
 
 let age = 30;
 
+
 const summarizeUser = (userName, price, onsale) => {
     return (
         'Name is ' +  userName +
