@@ -9,7 +9,7 @@ const person = {
 
 person.greet()
 
-const printName = ({ name }) => {
+const printName = ({ name }) => { // the parameter is an object with a property name - we deconstruct the object with {}
     console.log(name);
 };
 
