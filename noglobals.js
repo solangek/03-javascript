@@ -9,6 +9,9 @@
  Note that the parenthesis around the anonymous function are required,
  because statements that begin with the keyword function are always
  considered to be function declarations.
+ 
+ Hint: avoid doing this while you are debugging, because the stack trace 
+    will not contain the name of your function and line number.
  */
 
 (function () {
