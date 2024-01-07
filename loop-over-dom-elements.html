@@ -6,9 +6,14 @@
 </head>
 <body>
 <script>
-
+    // why is all this code inside a listener?
+    // because we want to make sure that the DOM is loaded before we try to access it
     document.addEventListener('DOMContentLoaded', function() {
-        const fakeImages = document.querySelectorAll(".fake-image");
+
+        // 1. get all the fake images elements, the function returns a NodeList (a collection of nodes)
+        // note this is not an array, it is an iterable object
+        const fakeImages = document.querySelectorAll(".fake-image"); // .fake-image is a CSS selector
+
         // 1. classic way
         for (var i = 0; i < fakeImages.length; i++)
             console.log('case 1: fakeImage: ', fakeImages[i], ' type = ', typeof(fakeImages[i]));
@@ -27,7 +32,6 @@
 
         for (const [key,value] of fakeImages.entries())
             console.log('case 3b:',  key)
-
 
         // 4. for each for nodes
         fakeImages.forEach(fakeImage => {
