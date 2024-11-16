@@ -17,7 +17,7 @@
 (function () {
     // We keep these variables private inside this closure scope
 
-    let myGrades = [93, 95, 45, 0, 70, 91];
+    const myGrades = [93, 95, 45, 0, 70, 91];
 
     const average = function() {
         var total = myGrades.reduce(function(accumulator, item) {

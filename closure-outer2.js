@@ -1,5 +1,5 @@
 // Closures store references to the outer function’s variables;
-// they do not store the actual value.  
+// they do not store the actual value. 
 //
 // Closures get more interesting when the value of
 // the outer function’s variable changes before the closure
