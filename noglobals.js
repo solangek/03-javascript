@@ -15,29 +15,27 @@
  */
 
 (function () {
-    // We keep these variables private inside this closure scope
+  // We keep these variables private inside this closure scope
 
-    const myGrades = [93, 95, 45, 0, 70, 91];
+  const myGrades = [93, 95, 45, 0, 70, 91];
 
-    const average = function() {
-        var total = myGrades.reduce(function(accumulator, item) {
-            return accumulator + item}, 0);
+  const average = function () {
+    var total = myGrades.reduce(function (accumulator, item) {
+      return accumulator + item;
+    }, 0);
 
-        return 'Your average grade is ' + total / myGrades.length + '.';
-    }
+    return 'Your average grade is ' + total / myGrades.length + '.';
+  };
 
-    const failing = function(){
-        var failingGrades = myGrades.filter(function(item) {
-            return item < 55;});
+  const failing = function () {
+    var failingGrades = myGrades.filter(function (item) {
+      return item < 55;
+    });
 
-        return 'You failed ' + failingGrades.length + ' times.';
-    }
+    return 'You failed ' + failingGrades.length + ' times.';
+  };
 
-    console.log(failing());
-
-
+  console.log(failing());
 })();
 
 // ‘You failed 2 times.’
-
-
